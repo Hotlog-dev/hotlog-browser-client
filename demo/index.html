@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300;1,600&display=swap"
+          rel="stylesheet">
+    <style>
+        html,body{
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<button id="cl-btn">Trigger hotlog</button>
+<button id="cl-btn-o">Trigger hotlog object</button>
+</div>
+<script type="module">
+    import Hotlog from "../index.js";
+    Hotlog.register();
+
+    document.getElementById('cl-btn').addEventListener('click', function(){
+        hotlog.log('Hotlog trigerred !', '10', 10)
+    })
+    document.getElementById('cl-btn-o').addEventListener('click', function(){
+        hotlog.log(window)
+
+    })
+    hotlog.log('Test hotlog !')
+</script>
+</body>
+</html>
